@@ -3,6 +3,8 @@
  */
 class BaseController {
 
+    //just a comment now one more add to display gulp watch and more and more and more
+
     constructor(resource, $routeParams, $location, ResourceService) {
         "use strict";
         this.resource = resource;

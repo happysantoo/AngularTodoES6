@@ -4,6 +4,8 @@
 .idea/
 bower_components/
 out/
+node_modules
+
 
 #################
 ## Eclipse
