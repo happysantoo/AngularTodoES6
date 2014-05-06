@@ -1,0 +1,14 @@
+{
+    "_id": "_design/api",
+    "lists": {
+        "all": "function(head, req) { var values = []; while (row = getRow()) { values.push(row.value); } return JSON.stringify(values); }"
+    },
+    "shows": {
+        "detail": "function(doc, req) { var myDoc = JSON.parse(JSON.stringify( doc )); delete myDoc['_revisions']; myDoc.id = myDoc._id; return { 'json': myDoc }; }"
+    },
+    "views": {
+        "default": {
+            "map": "function (doc){ var myDoc = JSON.parse(JSON.stringify( doc )); myDoc.id = myDoc._id; emit(myDoc._id, myDoc); }"
+        }
+    }
+}

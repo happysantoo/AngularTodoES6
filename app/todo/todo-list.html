@@ -1,0 +1,32 @@
+<div>
+    <!--Sidebar content-->
+    Search: <input fis-autofocus="dc.resetFocus" ng-model="query">
+    Sort by:
+    <select ng-model="dc.orderProp">
+        <option value="title">Title</option>
+        <option value="id">Id</option>
+    </select>
+    <button class="btn btn-primary" ng-click="dc.getList()">Refresh</button>
+    <a class="btn btn-primary" href="#/todos/new">New</a>
+    <p />
+</div>
+<!--Body content-->
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Completed?</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tr ng-repeat="todo in dc.viewModel | filter:query | orderBy:orderProp">
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.isDone}}</td>
+        <td>
+            <a href="#/todos/{{todo.id}}"><span class="glyphicon glyphicon-eye-open"></span></a>
+            <a href="" ng-click="dc.deleteItem(todo)"><span class="glyphicon glyphicon-remove"></span></a>
+        </td>
+    </tr>
+</table>

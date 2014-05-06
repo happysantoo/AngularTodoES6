@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <title>AngularJS Todo</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.10/ng-grid.min.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.10/ng-grid.min.js"></script>
+    <script src="bower_components/traceur-runtime/traceur-runtime.min.js"></script>
+
+    <script src="out/app/shared/index.js"></script>
+    <script src="out/app/shared/autofocus-directive.js"></script>
+    <script src="out/app/shared/base-controller.js"></script>
+    <script src="out/app/shared/base-list-controller.js"></script>
+    <script src="out/app/shared/base-new-controller.js"></script>
+    <script src="out/app/shared/base-show-controller.js"></script>
+    <script src="out/app/shared/base-edit-controller.js"></script>
+    <script src="out/app/shared/resource-service-couchdb.js"></script>
+    <!--
+    <script src="out/app/shared/resource-service-web-api.js"></script>
+    -->
+    <script src="out/app/todo/index.js"></script>
+    <script src="out/app/todo/todo-list-controller.js"></script>
+    <script src="out/app/todo/todo-new-controller.js"></script>
+    <script src="out/app/todo/todo-show-controller.js"></script>
+    <script src="out/app/todo/todo-edit-controller.js"></script>
+
+    <script src="out/app/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">AngularJS Todo</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/todos">Todo</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="./">Default</a></li>
+                    <li><a href="../navbar-static-top/">Static top</a></li>
+                    <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+    <div ng-view></div>
+</div>
+</body>
+</html>

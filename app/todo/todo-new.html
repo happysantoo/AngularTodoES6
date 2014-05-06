@@ -1,0 +1,30 @@
+<div id="messages" class="alert alert-success" data-ng-show="dc.messages" data-ng-bind="dc.messages"></div>
+<form novalidate class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Id</label>
+        <div class="col-sm-10">
+            <div class="form-control-static">{{dc.viewModel.id}}</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="todoTitle" class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-10">
+            <input fis-autofocus="dc.resetFocus" type="text" class="form-control" id="todoTitle" name="todoTitle" ng-model="dc.viewModel.title" placeholder="Title" required />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="todoIsDone" name="todoIsDone" ng-model="dc.viewModel.isDone" /> Completed
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-primary" ng-click="dc.create(dc.viewModel)">Save</button>
+            <a href="#/todos" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>
