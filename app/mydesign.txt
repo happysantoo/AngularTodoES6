@@ -1,2 +1,2 @@
-curl -X PUT http://127.0.0.1:5984/atms
-curl -X PUT http://127.0.0.1:5984/atms/_design/api --data-binary @mydesign.json
+curl -X PUT http://127.0.0.1:5984/todos
+curl -X PUT http://127.0.0.1:5984/todos/_design/api --data-binary @mydesign.json
